@@ -49,6 +49,14 @@ namespace APIObterJuros
 
             app.UseAuthorization();
 
+            app.UseCors(c =>
+            {
+                c.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
