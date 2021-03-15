@@ -57,6 +57,7 @@ namespace ApiObterJuros
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Obter Juros");
+                c.RoutePrefix = "";
             });
         }
     }
